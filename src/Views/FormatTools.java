@@ -49,9 +49,8 @@ public class FormatTools extends JFrame {
                     frame.setVisible(true);
                     Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
                     frame.setLocation(dim.width / 2 - frame.getSize().width / 2,
-                        dim.height / 2 - frame.getSize().height / 2);
-                }
-                catch (Exception e) {
+                            dim.height / 2 - frame.getSize().height / 2);
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
@@ -61,15 +60,15 @@ public class FormatTools extends JFrame {
     /**
      * Create the frame.
      */
+    @SuppressWarnings({ "unchecked", "rawtypes" })
     public FormatTools() {
 
         System.setProperty("apple.laf.useScreenMenuBar", "true");
         System.setProperty("com.apple.mrj.application.apple.menu.about.name", "WikiTeX");
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-        }
-        catch (ClassNotFoundException | InstantiationException | IllegalAccessException
-            | UnsupportedLookAndFeelException e) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException
+                | UnsupportedLookAndFeelException e) {
             e.printStackTrace();
         }
 
@@ -151,7 +150,7 @@ public class FormatTools extends JFrame {
         contentPane.add(btnExecute);
 
         JComboBox cmbOption = new JComboBox();
-        cmbOption.setModel(new DefaultComboBoxModel(new String[] {"FillParms", "Format", "FillParams And Format"}));
+        cmbOption.setModel(new DefaultComboBoxModel(new String[] { "FillParms", "Format", "FillParams And Format" }));
         cmbOption.setBounds(413, 8, 163, 20);
         contentPane.add(cmbOption);
 

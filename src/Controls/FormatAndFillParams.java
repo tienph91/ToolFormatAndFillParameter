@@ -2,7 +2,6 @@
 package Controls;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import Models.Param;
@@ -54,6 +53,11 @@ public class FormatAndFillParams {
         return sql;
     }
 
+    /**
+     * @param params
+     *            Get type of params
+     * @return
+     */
     public int getTypeOfParams(String params) {
         int type = 1;
 
@@ -79,6 +83,11 @@ public class FormatAndFillParams {
         return type;
     }
 
+    /**
+     * @param str
+     *            extract list params from input str: Type one
+     * @return
+     */
     public List<String> extractParamsFromViewTypeOne(String str) {
         List<String> list = new ArrayList<String>();
 
@@ -115,6 +124,11 @@ public class FormatAndFillParams {
         return list;
     }
 
+    /**
+     * @param str
+     *            extract list params from input str: Type two
+     * @return
+     */
     public List<String> extractParamsFromViewTypeTwo(String str) {
         List<String> list = new ArrayList<String>();
 
@@ -142,6 +156,11 @@ public class FormatAndFillParams {
         return list;
     }
 
+    /**
+     * @param strParam
+     *            extract list params from input str: Type three
+     * @return
+     */
     public List<Param> extractParamsFromViewTypeThree(String strParam) {
         List<Param> list = new ArrayList<Param>();
 
@@ -193,10 +212,17 @@ public class FormatAndFillParams {
 
     public String formatSql(String sql) {
 
-        // TODO : format sql
         return sql;
     }
 
+    /**
+     * @param sql
+     * @param listParams
+     * 
+     *            replace '?' by param
+     * 
+     * @return
+     */
     public String fillParams(String sql, List<String> listParams) {
 
         int i = 0, j;
@@ -237,6 +263,12 @@ public class FormatAndFillParams {
         return kq;
     }
 
+    /**
+     * @param sql
+     * @param listParams
+     *            fill param of type 3
+     * @return
+     */
     public String fillParamsType3(String sql, List<Param> listParams) {
 
         int i = 0, j;
