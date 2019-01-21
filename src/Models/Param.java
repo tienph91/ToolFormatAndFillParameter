@@ -1,7 +1,5 @@
 package Models;
 
-import java.util.Comparator;
-
 public class Param implements Comparable<Param> {
 
     private String valueParam;

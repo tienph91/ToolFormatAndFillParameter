@@ -48,7 +48,7 @@ public class FormatAndFillParams {
             sql = this.fillParams(sql, listParams);
         } else {
 
-            Collections.sort(listParamsType3);
+            // Collections.sort(listParamsType3);
             sql = this.fillParamsType3(sql, listParamsType3);
         }
         return sql;
@@ -149,7 +149,7 @@ public class FormatAndFillParams {
         int i, j;
         Param param = null;
         int dem;
-        String[] strArrays = strParam.split(System.getProperty("line.separator"));
+        String[] strArrays = strParam.split("\n");
 
         for (String str : strArrays) {
 
